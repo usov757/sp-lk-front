@@ -4,7 +4,9 @@ import * as VoteService from '../services/vote.service'
 export function useVote() {
 
   async function getVote() {
-    return await VoteService.get()
+    const { data } = await VoteService.get()
+
+    return data
   }
 
   async function createVote() {

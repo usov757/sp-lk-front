@@ -11,6 +11,7 @@ import './utils/date.util'
 const { store } = useStore()
 
 getCurrentUser().then((user) => {
+  console.log(user)
   store.value.sessionStorage.user = user
 })
 
